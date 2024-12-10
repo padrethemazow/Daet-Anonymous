@@ -1,0 +1,214 @@
+body {
+    font-family: 'Arial Black', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('S:/Daet LGU Anonymous Report and Suggestions/image2jpg.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+/* Overlay Effect */
+body::before {
+    content: "";
+    position: fixed; /* Ensures it covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    z-index: -1; /* Puts the overlay behind the content */
+}
+
+
+nav {
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #ccc;
+    height:50px;
+    flex-direction: column;
+}
+.navbar {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: left; 
+}
+
+.navbar li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.navbar li a {
+    text-decoration: none; 
+    color: black; 
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+
+.navbar li a:hover {
+    text-decoration: none;
+    color: #007bff; /* Link color on hover */
+}
+
+.navbar li a.active {
+    text-decoration: underline;
+    color: black;
+    position: relative;
+    border-bottom: 1px solid black; /* Simulates underline effect for active link */
+}
+
+.header-container {
+    display: flex; /* Enables flexbox for horizontal alignment */
+    align-items: center; /* Vertically aligns items */
+    justify-content: space-between; /* Ensures space between logo and text */
+    padding: 10px 20px; /* Adds some padding for spacing */
+}
+
+.header-container h1 {
+    text-align: center;
+    flex-grow: 1; /* Allows the h1 to take the center space */
+    margin: 0; /* Removes default margins */
+}
+
+.header-container img {
+    max-width: 80px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: black;
+    margin-top: 0; /* Keep no space from the top */
+}
+
+
+
+
+/*CONTACT INFO*/
+.contact-section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align image and text vertically in the center */
+    justify-content: space-between; /* Space between image and text */
+    padding: 20px;
+    max-width: 1200px; /* Adjust based on your layout */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+
+.contact-image{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact-image img{
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 8px; /*rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container {
+    display: flex; 
+    justify-content: space-between;
+    text-align: right; 
+    padding: 20px; 
+}
+
+
+.contact-text {
+    width: 50%; 
+    padding: 10px;
+    color: white;
+}
+
+.contact-text h2{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.contact-text p{
+    font-size: 1em;
+    line-height: 1.5;
+    color: white; /* Dark text for readability */
+}
+
+
+
+
+/*ADDRESS CSS*/
+
+
+.address-selection{
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.address-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.address-text{
+    width: 50%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+
+}
+
+.address-text h2{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    text-align: center;
+
+}
+
+.address-text p{
+    font-size: 1em;
+    line-height: 1.6;
+    color: white;
+    text-align: left;
+    
+}
+
+
+
+.address-image{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.address-image img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

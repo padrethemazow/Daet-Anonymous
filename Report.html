@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daet Report and Suggestion Website</title>
+    <link rel="stylesheet" href="Report.css">
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="UserHome.html">Home</a></li>
+            <li><a href="Report.html" class="active">Report</a></li>
+            <li><a href="Suggestion.html">Suggestions</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-container">
+        <img src="DaetLogo.png" alt="Daet Logo">
+        <h1>Daet LGU Anonymous Report and Suggestion</h1>
+    </div>   
+    <i><p>Serbisyo ang hatid kahit sino ka man</p></i>
+    <div class="form-container">
+        <div class="dropdown-container">
+            <select name="dropdown1" id="dropdown1">
+                <option value="" disabled selected>Urgency</option>
+                <option value="LevelofUrgency1">low urgency</option>
+                <option value="LevelofUrgency2">medium urgency</option>
+                <option value="LevelofUrgency3">high urgency</option>
+            </select>
+
+            <select name="dropdown2" id="dropdown2">
+                <option value="" disabled selected>Brgy</option>
+                <option value="BrgyA">Alawihao</option>
+                <option value="BrgyB">Awitan</option>
+                <option value="BrgyC">Bagasbas</option>
+                <option value="BrgyD">Brgy 1 (Pasig)</option>
+                <!-- Add other barangay options here -->
+            </select>
+        </div>
+
+        <textarea id="report" name="report" rows="5" cols="50" placeholder="Enter your report here."></textarea><br>
+        <button type="button" id="submitBtn">Submit</button>
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            var urgency = document.getElementById('dropdown1').value;
+            var brgy = document.getElementById('dropdown2').value;
+            var reportContent = document.getElementById('report').value;
+
+            // Make sure the form data is valid
+            if (!urgency || !brgy || !reportContent) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            var formData = new FormData();
+            formData.append('urgency', urgency);
+            formData.append('brgy', brgy);
+            formData.append('reportContent', reportContent);
+
+            // Send the form data to the PHP server using Fetch API
+            fetch('submit-report.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Report submitted successfully!');
+                    // Optionally clear the form after successful submission
+                    document.getElementById('report').value = '';
+                    document.getElementById('dropdown1').value = '';
+                    document.getElementById('dropdown2').value = '';
+                } else {
+                    alert('Error submitting report: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your report.');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+body {
+    font-family: 'Arial Black', Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0; /* Removes default body margin */
+    padding: 0; /* Removes default body padding */
+    background: url('S:/Daet LGU Anonymous Report and Suggestions/image2jpg.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+/*Overlay effect*/
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    z-index: -1; /* Puts the overlay behind the content */
+}
+
+/*NAVIGATION CSS*/
+nav {
+    background-color: #f8f8f8;
+    height:60px;
+}
+.navbar {
+    list-style: none; /* Removes bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Aligns items horizontally */
+    justify-content: left; /* Aligns to the left */
+}
+
+.navbar li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.navbar li a {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Default link color */
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+
+.navbar li a:hover {
+    text-decoration: none;
+    color: #007bff; /* Link color on hover */
+}
+
+.navbar li a.active {
+    text-decoration: underline;
+    color: black;
+    position: relative;
+    border-bottom: 1px solid black; /* Simulates underline effect for active link */
+}
+
+
+
+/*HEADER CSS*/
+
+.header-container {
+    display: flex; /* Enables flexbox for horizontal alignment */
+    align-items: center; /* Vertically aligns items */
+    justify-content: space-between; /* Ensures space between logo and text */
+    padding: 10px 20px; /* Adds some padding for spacing */
+}
+
+.header-container h1 {
+    text-align: center;
+    flex-grow: 1; /* Allows the h1 to take the center space */
+    margin: 0; /* Removes default margins */
+}
+
+
+
+
+.header-container img {
+    max-width: 80px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: black;
+    margin-top: 0; /* Keep no space from the top */
+}
+
+.dropdown-container {
+    display: flex; /* Enables horizontal alignment */
+    gap: 10px; /* Adds space between the dropdowns */
+    align-items: flex-start; /* Aligns the dropdowns vertically at the top */
+    width: 90%;
+  }
+  
+select {
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+
+.form-container {
+    display: flex; /* Enable flexbox for the container */
+    flex-direction: column; /* Stack the textarea and button vertically */
+    justify-content: center; /* Center vertically within the container */
+    align-items: center; /* Center horizontally within the container */
+    min-height: 70vh; /* Adjust the height of this container */
+}
+
+textarea {
+    width: 90%; /* Adjust width as needed */
+    max-width: 1500px; /* Maximum width of textarea */
+    height: 300px; /* Adjust height as needed */
+    margin: 10px 0; /* Add some space between elements */
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Button hover effect */
+}

@@ -1,0 +1,206 @@
+body {
+    font-family: 'Arial Black', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('S:/Daet LGU Anonymous Report and Suggestions/image2jpg.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+/* Overlay Effect */
+body::before {
+    content: "";
+    position: fixed; /* Ensures it covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    z-index: -1; /* Puts the overlay behind the content */
+}
+
+nav {
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #ccc;
+    height:50px;
+    flex-direction: column;
+}
+.navbar {
+    list-style: none; /* Removes bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Aligns items horizontally */
+    justify-content: left; /* Aligns to the left */
+}
+
+.navbar li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.navbar li a {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Default link color */
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+
+.navbar li a:hover {
+    text-decoration: none;
+    color: #007bff; /* Link color on hover */
+}
+
+.navbar li a.active {
+    text-decoration: underline;
+    color: black;
+    position: relative;
+    border-bottom: 1px solid black; /* Simulates underline effect for active link */
+}
+
+.header-container {
+    display: flex; /* Enables flexbox for horizontal alignment */
+    align-items: center; /* Vertically aligns items */
+    justify-content: space-between; /* Ensures space between logo and text */
+    padding: 10px 20px; /* Adds some padding for spacing */
+}
+
+.header-container h1 {
+    text-align: center;
+    flex-grow: 1; /* Allows the h1 to take the center space */
+    margin: 0; /* Removes default margins */
+}
+
+.header-container img {
+    max-width: 80px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: black;
+    margin-top: 0; /* Keep no space from the top */
+}
+
+
+/* Image Section */
+.image-section {
+    text-align: center;  /* Center the conatiner */
+    margin: 20px auto;   /* Space between above and below */
+}
+
+
+.image-container{
+    width: 80%;    /* width of the container */
+    max-width: 900px;
+    margin: 0 auto;     /* center the container */
+    border: 2px solid #ccc;    /*add subtle border */
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);       /* add a light shadow */
+    overflow: hidden;         /* Prevent the content overflow */
+}
+
+
+.image-section img {
+    width: 70%;
+    height: auto;
+}
+
+
+.carousel-indicators {
+    margin-top: 10px;
+}
+
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #007bff;
+}
+
+
+
+/* Services Section */
+.service-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.service-text {
+    width: 50%;
+    flex: 1;
+    padding-right: 10px;
+}
+.service-text h2 {
+    margin-bottom: 10;
+    font-size: 2em;
+    color: black;
+}
+.service-text h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #666;
+}
+.service-text p {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.service-image {
+    width: 50%; /* Image takes the other half */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+.service-image img {
+    max-width: 70%;
+    height: auto;
+    border: 1px solid #ccc;
+
+}
+
+
+/* Thumbnail Section */
+.thumbnail-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.thumbnail-image {
+    width: 48%; /* Two thumbnails take half the space each */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Keeps images within the border */
+}
+
+.thumbnail-image img {
+    width: 100%; /* Ensure images fill container */
+    height: auto;
+    display: block;
+}

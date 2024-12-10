@@ -1,0 +1,89 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Needed for pseudo-element positioning */
+    height: 100vh; /* Ensures full viewport height */
+    overflow: hidden; /* Prevents scrolling issues */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("C:/Daet LGU Anonymous Report and Suggestions/1strizalmonument.jpg") center/cover no-repeat;
+    opacity: 0.6; /* Adjust transparency of the background image */
+    z-index: -1; /* Keeps pseudo-element behind body content */
+}
+
+
+/* Header styling */
+h1 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+    margin-top: 20px;
+
+}
+
+.username {
+    background-color: white;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 260px;
+    align-items: center;
+
+}
+
+.password {
+    background-color: white;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 260px;
+    margin-top: 20px;
+
+}
+
+button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+
+/* Center image */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 300px; /* Scales image width */
+}
+
+
